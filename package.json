@@ -1,5 +1,5 @@
 {
-  "name": "react-theme-switcher",
+  "name": "react-my-theme-switcher",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -9,13 +9,16 @@
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-scripts": "4.0.3",
+    "sass": "^1.43.4",
     "web-vitals": "^1.1.2"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "sass": "sass src/styles/scss:src/styles/css --watch --no-source-map",
+    "dev": "concurrently --kill-others \"npm start\" \"npm run sass\""
   },
   "eslintConfig": {
     "extends": [

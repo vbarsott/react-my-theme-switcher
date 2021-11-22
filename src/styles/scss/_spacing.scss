@@ -1,0 +1,184 @@
+// SPACING
+
+$spacers: (
+  '0': 0,
+  '1': $spacer / 4,
+  '2': $spacer / 2,
+  '3': $spacer,
+  '4': $spacer * 2,
+  '5': $spacer * 3,
+);
+
+$spacing: (
+  'padding': (
+    'prefix': 'p',
+    'values':
+      map-merge(
+        $spacers,
+        (
+          auto: auto,
+        )
+      ),
+  ),
+  'padding-left': (
+    'prefix': 'ps',
+    'values':
+      map-merge(
+        $spacers,
+        (
+          auto: auto,
+        )
+      ),
+  ),
+  'padding-right': (
+    'prefix': 'pe',
+    'values':
+      map-merge(
+        $spacers,
+        (
+          auto: auto,
+        )
+      ),
+  ),
+  'padding-top': (
+    'prefix': 'pt',
+    'values':
+      map-merge(
+        $spacers,
+        (
+          auto: auto,
+        )
+      ),
+  ),
+  'padding-bottom': (
+    'prefix': 'pb',
+    'values':
+      map-merge(
+        $spacers,
+        (
+          auto: auto,
+        )
+      ),
+  ),
+  'padding-top-bottom': (
+    'prefix': 'py',
+    'values':
+      map-merge(
+        $spacers,
+        (
+          auto: auto,
+        )
+      ),
+  ),
+  'padding-left-right': (
+    'prefix': 'px',
+    'values':
+      map-merge(
+        $spacers,
+        (
+          auto: auto,
+        )
+      ),
+  ),
+  'margin': (
+    'prefix': 'm',
+    'values':
+      map-merge(
+        $spacers,
+        (
+          auto: auto,
+        )
+      ),
+  ),
+  'margin-left': (
+    'prefix': 'ms',
+    'values':
+      map-merge(
+        $spacers,
+        (
+          auto: auto,
+        )
+      ),
+  ),
+  'margin-right': (
+    'prefix': 'me',
+    'values':
+      map-merge(
+        $spacers,
+        (
+          auto: auto,
+        )
+      ),
+  ),
+  'margin-top': (
+    'prefix': 'mt',
+    'values':
+      map-merge(
+        $spacers,
+        (
+          auto: auto,
+        )
+      ),
+  ),
+  'margin-bottom': (
+    'prefix': 'mb',
+    'values':
+      map-merge(
+        $spacers,
+        (
+          auto: auto,
+        )
+      ),
+  ),
+  'margin-top-bottom': (
+    'prefix': 'my',
+    'values':
+      map-merge(
+        $spacers,
+        (
+          auto: auto,
+        )
+      ),
+  ),
+  'margin-left-right': (
+    'prefix': 'mx',
+    'values':
+      map-merge(
+        $spacers,
+        (
+          auto: auto,
+        )
+      ),
+  ),
+);
+@each $property, $map in $spacing {
+  $prefix: map-get($map, 'prefix');
+  $values: map-get($map, 'values');
+  @each $k, $v in $values {
+    @if ($prefix == 'py') {
+      .#{$prefix}-#{$k} {
+        padding-top: $v;
+        padding-bottom: $v;
+      }
+    } @else if ($prefix == 'px') {
+      .#{$prefix}-#{$k} {
+        padding-left: $v;
+        padding-right: $v;
+      }
+    } @else if ($prefix == 'my') {
+      .#{$prefix}-#{$k} {
+        margin-top: $v;
+        margin-bottom: $v;
+      }
+    } @else if ($prefix == 'mx') {
+      .#{$prefix}-#{$k} {
+        margin-left: $v;
+        margin-right: $v;
+      }
+    } @else {
+      .#{$prefix}-#{$k} {
+        #{$property}: $v;
+      }
+    }
+  }
+}

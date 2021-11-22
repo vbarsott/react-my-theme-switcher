@@ -1,0 +1,20 @@
+// COLORS
+
+$th-colors: (
+  'colors': (
+    'values': (
+      'light-color': $light-color,
+      'dark-color': $dark-color,
+      'error': $error,
+      'info': $info,
+    ),
+  ),
+);
+@each $property, $map in $th-colors {
+  $values: map-get($map, 'values');
+  @each $k, $v in $values {
+    .#{$k} {
+      color: $v;
+    }
+  }
+}

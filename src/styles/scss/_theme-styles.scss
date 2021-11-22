@@ -1,0 +1,57 @@
+// THEME STYLES
+
+.root {
+  --size: 1rem;
+  --background: #f2f2f2;
+  --color-primary: #48d1cc;
+  --stroke-color: #48d1cc;
+  --color: #000;
+}
+
+[data-theme-background='light'] {
+  --background: #f2f2f2;
+  --color: #000;
+}
+[data-theme-background='grey'] {
+  --background: #777;
+  --color: #f2f2f2;
+}
+[data-theme-background='dark'] {
+  --background: #000;
+  --color: #f2f2f2;
+}
+
+[data-theme-color='blue'] {
+  --color-primary: #1da1f2;
+}
+[data-theme-color='yellow'] {
+  --color-primary: #ffad1f;
+}
+[data-theme-color='red'] {
+  --color-primary: #e0255e;
+}
+[data-theme-color='purple'] {
+  --color-primary: #794bc3;
+}
+[data-theme-color='orange'] {
+  --color-primary: #f45e22;
+}
+[data-theme-color='green'] {
+  --color-primary: #48d1cc;
+}
+
+[data-theme-size='xs'] {
+  --size: 0.8rem;
+}
+[data-theme-size='sm'] {
+  --size: 0.9rem;
+}
+[data-theme-size='md'] {
+  --size: 1rem;
+}
+[data-theme-size='lg'] {
+  --size: 1.1rem;
+}
+[data-theme-size='xl'] {
+  --size: 1.2rem;
+}

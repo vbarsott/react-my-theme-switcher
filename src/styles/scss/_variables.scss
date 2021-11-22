@@ -1,0 +1,36 @@
+// COLORS
+$light-color: #f2f2f2;
+$dark-color: #343a40;
+$error: #fa463b;
+$info: #00ffff;
+
+// FONT FAMILY
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ranchers&display=swap');
+$font-default: 'Poppins', sans-serif;
+$font-styled: 'Ranchers', cursive;
+
+// FONT-SIZE
+$font-size-base: 1rem;
+$h1-font-size: $font-size-base * 2.5;
+$h2-font-size: $font-size-base * 2;
+$h3-font-size: $font-size-base * 1.75;
+$h4-font-size: $font-size-base * 1.5;
+$h5-font-size: $font-size-base * 1.25;
+$h6-font-size: $font-size-base;
+
+// FONT-WEIGHT
+$font-weight-lighter: lighter;
+$font-weight-light: 400;
+$font-weight-normal: 500;
+$font-weight-bold: 600;
+$font-weight-bolder: bolder;
+
+// LETTER SPACING
+$letter-spacing-base: 1px;
+
+// TEXT STROKE
+$text-stroke-width-base: 1px;
+
+// SPACING
+$spacer: 1rem;
