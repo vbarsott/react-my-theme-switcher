@@ -1,19 +1,19 @@
 // SIZING
 
 [data-theme-size='xs'] {
-  --size: 0.8rem;
-}
-[data-theme-size='sm'] {
   --size: 0.9rem;
 }
-[data-theme-size='md'] {
+[data-theme-size='sm'] {
   --size: 1rem;
 }
-[data-theme-size='lg'] {
+[data-theme-size='md'] {
   --size: 1.1rem;
 }
-[data-theme-size='xl'] {
+[data-theme-size='lg'] {
   --size: 1.2rem;
+}
+[data-theme-size='xl'] {
+  --size: 1.4rem;
 }
 
 $th-sizing: (

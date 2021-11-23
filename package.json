@@ -17,8 +17,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "sass": "sass src/styles/scss:src/styles/css --watch --no-source-map",
-    "dev": "concurrently --kill-others \"npm start\" \"npm run sass\""
+    "sass": "sass src/styles/scss:src/styles/css --watch --no-source-map"
   },
   "eslintConfig": {
     "extends": [

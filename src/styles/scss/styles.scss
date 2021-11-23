@@ -6,13 +6,17 @@
 @import './theme/yellow';
 @import './theme/green';
 
-@import './variables';
-@import './theme-classes';
-@import './colors';
-@import './typography';
-@import './sizing';
-@import './spacing';
-@import './layout';
-@import './buttons';
-@import './utilities';
-@import './reset';
+@import './utilities/functions';
+@import './theme/variables';
+@import './theme/theme-classes';
+
+@import './utilities/colors';
+@import './utilities/grid';
+@import './utilities/typography';
+@import './utilities/sizing';
+@import './utilities/spacing';
+@import './utilities/layout';
+@import './utilities/borders';
+@import './utilities/buttons';
+@import './utilities/utilities';
+@import './utilities/reset';

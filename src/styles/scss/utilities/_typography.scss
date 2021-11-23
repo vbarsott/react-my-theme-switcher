@@ -1,7 +1,7 @@
 // TYPOGRAPHY
 
 .text-stroke {
-  -webkit-text-stroke-color: $stroke;
+  -webkit-text-stroke-color: $stroke-color;
   -webkit-text-stroke-width: 1px;
 }
 
@@ -60,7 +60,7 @@ $fonts: (
         font-family: $font-styled;
         font-weight: $font-weight-normal;
         -webkit-text-stroke-width: 1px;
-        -webkit-text-stroke-color: $stroke;
+        -webkit-text-stroke-color: $stroke-color;
       }
     } @else {
       .#{$prefix}-#{$k} {

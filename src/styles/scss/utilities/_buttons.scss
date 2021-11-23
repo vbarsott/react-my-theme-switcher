@@ -7,8 +7,8 @@
   padding-left: $btn-spacer * 3;
   border-radius: 10px;
   border-style: solid;
-  border-color: grey;
-  border-width: 1px 2px 4px 2px;
+  border-color: $border-color;
+  border-width: 1px 1px 3px 1px;
   font-size: $font-size-base;
   font-weight: $font-weight-bold;
   transition: all 0.5s ease-out;
