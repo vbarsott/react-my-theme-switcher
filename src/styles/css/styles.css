@@ -1,50 +1,342 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Ranchers&display=swap");
-.root {
-  --size: 1rem;
-  --background: #f2f2f2;
-  --color-primary: #48d1cc;
-  --stroke-color: #48d1cc;
-  --color: #000;
+[data-theme-color=light] {
+  --primary: #000;
+  --secondary: #666;
+  --bg-theme: #f2f2f2;
+  --color: #333;
+  --accent: #e0255e;
+  --error: #fa463b;
+  --info: #00ffff;
+  --btn-text: #333;
+  --btn-bg: #f2f2f2;
+  --btn-accent: #333;
 }
 
-[data-theme-background=light] {
-  --background: #f2f2f2;
-  --color: #000;
-}
-
-[data-theme-background=grey] {
-  --background: #777;
+[data-theme-color=grey] {
+  --primary: #fff;
+  --secondary: #f2f2f2;
+  --bg-theme: #777;
   --color: #f2f2f2;
+  --accent: #e0255e;
+  --error: #fa463b;
+  --info: #00ffff;
+  --btn-text: #f2f2f2;
+  --btn-bg: #777;
+  --btn-accent: #f2f2f2;
 }
 
-[data-theme-background=dark] {
-  --background: #000;
+[data-theme-color=dark] {
+  --primary: #fff;
+  --secondary: #f2f2f2;
+  --bg-theme: #333;
   --color: #f2f2f2;
+  --accent: #e0255e;
+  --error: #fa463b;
+  --info: #00ffff;
+  --btn-text: #f2f2f2;
+  --btn-bg: #333;
+  --btn-accent: #f2f2f2;
+}
+
+[data-theme-color=floral] {
+  --primary: #9f535b;
+  --secondary: #738397;
+  --bg-theme: #e8d9d4;
+  --color: #333;
+  --accent: #e0255e;
+  --error: #fa463b;
+  --info: #00ffff;
+  --btn-text: #9f535b;
+  --btn-bg: #e8d9d4;
+  --btn-accent: #738397;
 }
 
 [data-theme-color=blue] {
-  --color-primary: #1da1f2;
+  --primary: #4682b4;
+  --secondary: #800080;
+  --bg-theme: #b8cad1;
+  --color: #333;
+  --accent: #c0392b;
+  --error: #fa463b;
+  --info: #00ffff;
+  --btn-text: #4682b4;
+  --btn-bg: #b8cad1;
+  --btn-accent: #800080;
 }
 
 [data-theme-color=yellow] {
-  --color-primary: #ffad1f;
-}
-
-[data-theme-color=red] {
-  --color-primary: #e0255e;
-}
-
-[data-theme-color=purple] {
-  --color-primary: #794bc3;
-}
-
-[data-theme-color=orange] {
-  --color-primary: #f45e22;
+  --primary: #ffad1f;
+  --secondary: #8791a2;
+  --bg-theme: #f7f4e0;
+  --color: #333;
+  --accent: #e56c51;
+  --error: #fa463b;
+  --info: #00ffff;
+  --btn-text: #ffad1f;
+  --btn-bg: #f7f4e0;
+  --btn-accent: #8791a2;
 }
 
 [data-theme-color=green] {
-  --color-primary: #48d1cc;
+  --primary: #73a2a1;
+  --secondary: #708090;
+  --bg-theme: #d8dace;
+  --color: #333;
+  --accent: #fa463b;
+  --error: #fa463b;
+  --info: #00ffff;
+  --btn-text: #73a2a1;
+  --btn-bg: #d8dace;
+  --btn-accent: #708090;
+}
+
+header,
+main {
+  transition: font-size 0.25s ease-in, color 0.25s ease-in, background-color 0.25s ease-in;
+}
+
+.size {
+  font-size: var(--size);
+}
+
+.background {
+  background-color: var(--background);
+}
+
+.bg-theme {
+  background-color: var(--bg-theme);
+}
+
+.color {
+  color: var(--color);
+}
+
+.primary {
+  color: var(--primary);
+}
+
+.secondary {
+  color: var(--secondary);
+}
+
+.error {
+  color: var(--error);
+}
+
+.info {
+  color: var(--info);
+}
+
+.accent {
+  color: var(--accent);
+}
+
+:root {
+  --stroke: #808080;
+  --error: #ff0000;
+  --info: #00ffff;
+  --blue: #4682b4;
+  --yellow: #ffff00;
+  --red: #ff0000;
+  --green: #008000;
+  --primary: #000000;
+  --secondary: #808080;
+  --background: #f2f2f2;
+  --bg-theme: #f2f2f2;
+  --color: #000000;
+  --btn-text: #000000;
+  --btn-bg: #f2f2f2;
+  --btn-accent: #800080;
+}
+
+.text-stroke {
+  -webkit-text-stroke-color: #808080;
+  -webkit-text-stroke-width: 1px;
+}
+
+.fs-1 {
+  font-size: 2.5rem;
+}
+
+.h1 {
+  font-size: 2.5rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+}
+
+.h1-styled {
+  font-size: 2.5rem;
+  font-family: "Ranchers", cursive;
+  font-weight: 500;
+}
+
+.h1-stroke {
+  font-size: 2.5rem;
+  font-family: "Ranchers", cursive;
+  font-weight: 500;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #808080;
+}
+
+.fs-2 {
+  font-size: 2rem;
+}
+
+.h2 {
+  font-size: 2rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+}
+
+.h2-styled {
+  font-size: 2rem;
+  font-family: "Ranchers", cursive;
+  font-weight: 500;
+}
+
+.h2-stroke {
+  font-size: 2rem;
+  font-family: "Ranchers", cursive;
+  font-weight: 500;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #808080;
+}
+
+.fs-3 {
+  font-size: 1.75rem;
+}
+
+.h3 {
+  font-size: 1.75rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+}
+
+.h3-styled {
+  font-size: 1.75rem;
+  font-family: "Ranchers", cursive;
+  font-weight: 500;
+}
+
+.h3-stroke {
+  font-size: 1.75rem;
+  font-family: "Ranchers", cursive;
+  font-weight: 500;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #808080;
+}
+
+.fs-4 {
+  font-size: 1.5rem;
+}
+
+.h4 {
+  font-size: 1.5rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+}
+
+.h4-styled {
+  font-size: 1.5rem;
+  font-family: "Ranchers", cursive;
+  font-weight: 500;
+}
+
+.h4-stroke {
+  font-size: 1.5rem;
+  font-family: "Ranchers", cursive;
+  font-weight: 500;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #808080;
+}
+
+.fs-5 {
+  font-size: 1.25rem;
+}
+
+.h5 {
+  font-size: 1.25rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+}
+
+.h5-styled {
+  font-size: 1.25rem;
+  font-family: "Ranchers", cursive;
+  font-weight: 500;
+}
+
+.h5-stroke {
+  font-size: 1.25rem;
+  font-family: "Ranchers", cursive;
+  font-weight: 500;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #808080;
+}
+
+.fs-6 {
+  font-size: 1rem;
+}
+
+.h6 {
+  font-size: 1rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+}
+
+.h6-styled {
+  font-size: 1rem;
+  font-family: "Ranchers", cursive;
+  font-weight: 500;
+}
+
+.h6-stroke {
+  font-size: 1rem;
+  font-family: "Ranchers", cursive;
+  font-weight: 500;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #808080;
+}
+
+.fw-lighter {
+  font-weight: lighter;
+  font-size: var(--size);
+}
+
+.fw-light {
+  font-weight: 400;
+  font-size: var(--size);
+}
+
+.fw-normal {
+  font-weight: 500;
+  font-size: var(--size);
+}
+
+.fw-bold {
+  font-weight: 600;
+  font-size: var(--size);
+}
+
+.fw-bolder {
+  font-weight: bolder;
+  font-size: var(--size);
+}
+
+.ls-sm {
+  letter-spacing: 1.1px;
+  font-size: var(--size);
+}
+
+.ls-md {
+  letter-spacing: 1.2px;
+  font-size: var(--size);
+}
+
+.ls-lg {
+  letter-spacing: 1.3px;
+  font-size: var(--size);
 }
 
 [data-theme-size=xs] {
@@ -65,78 +357,6 @@
 
 [data-theme-size=xl] {
   --size: 1.2rem;
-}
-
-.fs-1 {
-  font-size: 2.5rem;
-}
-
-.fs-2 {
-  font-size: 2rem;
-}
-
-.fs-3 {
-  font-size: 1.75rem;
-}
-
-.fs-4 {
-  font-size: 1.5rem;
-}
-
-.fs-5 {
-  font-size: 1.25rem;
-}
-
-.fs-6 {
-  font-size: 1rem;
-}
-
-.fw-lighter {
-  font-weight: lighter;
-}
-
-.fw-light {
-  font-weight: 400;
-}
-
-.fw-normal {
-  font-weight: 500;
-}
-
-.fw-bold {
-  font-weight: 600;
-}
-
-.fw-bolder {
-  font-weight: bolder;
-}
-
-.ls-sm {
-  letter-spacing: 1.1px;
-}
-
-.ls-md {
-  letter-spacing: 1.2px;
-}
-
-.ls-lg {
-  letter-spacing: 1.3px;
-}
-
-.light-color {
-  color: #f2f2f2;
-}
-
-.dark-color {
-  color: #343a40;
-}
-
-.error {
-  color: #fa463b;
-}
-
-.info {
-  color: #00ffff;
 }
 
 .w-5 {
@@ -899,25 +1119,54 @@
   text-align: center;
 }
 
-header,
-main {
-  transition: font-size 0.25s ease-in, color 0.25s ease-in, background-color 0.25s ease-in;
+.btn-accent-dark, .btn-accent-light, .theme-btn-dark, .theme-btn-light {
+  padding-top: 0.6rem;
+  padding-right: 1.8rem;
+  padding-bottom: 0.6rem;
+  padding-left: 1.8rem;
+  border-radius: 10px;
+  border-style: solid;
+  border-color: grey;
+  border-width: 1px 2px 4px 2px;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: all 0.5s ease-out;
 }
 
-.size {
-  font-size: var(--size);
+.theme-btn-light {
+  color: var(--btn-text);
+  background-color: var(--btn-bg);
+}
+.theme-btn-light:hover {
+  color: var(--btn-bg);
+  background-color: var(--btn-text);
 }
 
-.background {
-  background-color: var(--background);
+.theme-btn-dark {
+  color: var(--btn-bg);
+  background-color: var(--btn-text);
+}
+.theme-btn-dark:hover {
+  color: var(--btn-text);
+  background-color: var(--btn-bg);
 }
 
-.color {
-  color: var(--color);
+.btn-accent-light {
+  color: var(--btn-accent);
+  background-color: var(--btn-bg);
+}
+.btn-accent-light:hover {
+  color: var(--btn-bg);
+  background-color: var(--btn-accent);
 }
 
-.color-primary {
-  color: var(--color-primary);
+.btn-accent-dark {
+  color: var(--btn-bg);
+  background-color: var(--btn-accent);
+}
+.btn-accent-dark:hover {
+  color: var(--btn-accent);
+  background-color: var(--btn-bg);
 }
 
 *,

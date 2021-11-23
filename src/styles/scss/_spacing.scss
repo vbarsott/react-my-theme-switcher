@@ -1,15 +1,17 @@
 // SPACING
 
+@use 'sass:math';
+
 $spacers: (
   '0': 0,
-  '1': $spacer / 4,
-  '2': $spacer / 2,
+  '1': math.div($spacer, 4),
+  '2': math.div($spacer, 2),
   '3': $spacer,
   '4': $spacer * 2,
   '5': $spacer * 3,
 );
 
-$spacing: (
+$th-spacing: (
   'padding': (
     'prefix': 'p',
     'values':
@@ -151,7 +153,7 @@ $spacing: (
       ),
   ),
 );
-@each $property, $map in $spacing {
+@each $property, $map in $th-spacing {
   $prefix: map-get($map, 'prefix');
   $values: map-get($map, 'values');
   @each $k, $v in $values {

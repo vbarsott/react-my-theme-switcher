@@ -1,10 +1,18 @@
-@import './theme-styles';
+@import './theme/light';
+@import './theme/grey';
+@import './theme/dark';
+@import './theme/floral';
+@import './theme/blue';
+@import './theme/yellow';
+@import './theme/green';
+
 @import './variables';
-@import './typography';
+@import './theme-classes';
 @import './colors';
+@import './typography';
 @import './sizing';
 @import './spacing';
 @import './layout';
+@import './buttons';
 @import './utilities';
-@import './base';
 @import './reset';

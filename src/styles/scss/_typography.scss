@@ -1,5 +1,10 @@
 // TYPOGRAPHY
 
+.text-stroke {
+  -webkit-text-stroke-color: $stroke;
+  -webkit-text-stroke-width: 1px;
+}
+
 $fonts: (
   'font-size': (
     'prefix': 'fs',
@@ -35,43 +40,33 @@ $fonts: (
   $prefix: map-get($map, 'prefix');
   $values: map-get($map, 'values');
   @each $k, $v in $values {
-    .#{$prefix}-#{$k} {
-      #{$property}: $v;
+    @if ($prefix == 'fs') {
+      .#{$prefix}-#{$k} {
+        #{$property}: $v;
+      }
+      // HEADINGS
+      .h#{$k} {
+        #{$property}: $v;
+        font-family: $font-default;
+        font-weight: $font-weight-bold;
+      }
+      .h#{$k}-styled {
+        #{$property}: $v;
+        font-family: $font-styled;
+        font-weight: $font-weight-normal;
+      }
+      .h#{$k}-stroke {
+        #{$property}: $v;
+        font-family: $font-styled;
+        font-weight: $font-weight-normal;
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: $stroke;
+      }
+    } @else {
+      .#{$prefix}-#{$k} {
+        #{$property}: $v;
+        font-size: var(--size);
+      }
     }
   }
 }
-
-// HEADINGS
-
-// @for $i from 1 through 6 {
-//   .h#{$i} {
-//     font-family: $font-default;
-//     font-weight: $font-weight-bold;
-//   }
-// }
-// .h#{$k} {
-//   #{$property}: $v;
-//   font-family: $font-default;
-//   font-weight: $font-weight-bold;
-// }
-// .h#{$k}-styled {
-//   #{$property}: $v;
-//   font-family: $font-styled;
-//   font-weight: $font-weight-normal;
-//   letter-spacing: $letter-spacing-base * 2;
-// }
-
-// .h1-stroke {
-//   color: black;
-//   -webkit-text-fill-color: steelblue;
-//   -webkit-text-stroke-width: 0.3px;
-//   -webkit-text-stroke-color: grey;
-//   font-family: $font-styled;
-// }
-// .h2-shadow {
-//   -webkit-text-stroke: 0.5px grey;
-//   color: white;
-//   text-shadow: 2px 2px 0 grey, -1px -1px 0 grey, 1px -1px 0 grey,
-//     -1px 1px 0 grey, 1px 1px 0 #000;
-//   font-family: $font-styled;
-// }

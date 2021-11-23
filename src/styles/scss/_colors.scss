@@ -1,20 +1,41 @@
 // COLORS
 
-$th-colors: (
-  'colors': (
-    'values': (
-      'light-color': $light-color,
-      'dark-color': $dark-color,
-      'error': $error,
-      'info': $info,
-    ),
-  ),
+$stroke: #808080;
+$error: #ff0000;
+$info: #00ffff;
+$blue: #4682b4;
+$yellow: #ffff00;
+$red: #ff0000;
+$green: #008000;
+$primary: #000000;
+$secondary: #808080;
+$background: #f2f2f2;
+$bg-theme: #f2f2f2;
+$color: #000000;
+$btn-text: #000000;
+$btn-bg: #f2f2f2;
+$btn-accent: #800080;
+
+$th-styling: (
+  'stroke': $stroke,
+  'error': $error,
+  'info': $info,
+  'blue': $blue,
+  'yellow': $yellow,
+  'red': $red,
+  'green': $green,
+  'primary': $primary,
+  'secondary': $secondary,
+  'background': $background,
+  'bg-theme': $bg-theme,
+  'color': $color,
+  'btn-text': $btn-text,
+  'btn-bg': $btn-bg,
+  'btn-accent': $btn-accent,
 );
-@each $property, $map in $th-colors {
-  $values: map-get($map, 'values');
-  @each $k, $v in $values {
-    .#{$k} {
-      color: $v;
-    }
+
+:root {
+  @each $color, $value in $th-styling {
+    --#{$color}: #{$value};
   }
 }

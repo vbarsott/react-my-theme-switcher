@@ -1,8 +1,7 @@
-// COLORS
-$light-color: #f2f2f2;
-$dark-color: #343a40;
-$error: #fa463b;
-$info: #00ffff;
+// VARIABLES
+
+$variable-prefix: th-;
+$size: 1rem;
 
 // FONT FAMILY
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
@@ -12,6 +11,7 @@ $font-styled: 'Ranchers', cursive;
 
 // FONT-SIZE
 $font-size-base: 1rem;
+$h1-font-size: $font-size-base * 2.5;
 $h1-font-size: $font-size-base * 2.5;
 $h2-font-size: $font-size-base * 2;
 $h3-font-size: $font-size-base * 1.75;
@@ -34,3 +34,4 @@ $text-stroke-width-base: 1px;
 
 // SPACING
 $spacer: 1rem;
+$btn-spacer: 0.6rem;

@@ -1,0 +1,52 @@
+// BUTTONS
+
+%btn {
+  padding-top: $btn-spacer;
+  padding-right: $btn-spacer * 3;
+  padding-bottom: $btn-spacer;
+  padding-left: $btn-spacer * 3;
+  border-radius: 10px;
+  border-style: solid;
+  border-color: grey;
+  border-width: 1px 2px 4px 2px;
+  font-size: $font-size-base;
+  font-weight: $font-weight-bold;
+  transition: all 0.5s ease-out;
+}
+
+.theme-btn-light {
+  @extend %btn;
+  color: var(--btn-text);
+  background-color: var(--btn-bg);
+  &:hover {
+    color: var(--btn-bg);
+    background-color: var(--btn-text);
+  }
+}
+.theme-btn-dark {
+  @extend %btn;
+  color: var(--btn-bg);
+  background-color: var(--btn-text);
+  &:hover {
+    color: var(--btn-text);
+    background-color: var(--btn-bg);
+  }
+}
+.btn-accent-light {
+  @extend %btn;
+  color: var(--btn-accent);
+  background-color: var(--btn-bg);
+  &:hover {
+    color: var(--btn-bg);
+    background-color: var(--btn-accent);
+  }
+}
+.btn-accent-dark {
+  @extend %btn;
+  color: var(--btn-bg);
+  background-color: var(--btn-accent);
+  &:hover {
+    color: var(--btn-accent);
+    background-color: var(--btn-bg);
+  }
+}

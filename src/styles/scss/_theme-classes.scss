@@ -1,0 +1,34 @@
+// THEME CLASSES
+
+header,
+main {
+  transition: font-size 0.25s ease-in, color 0.25s ease-in,
+    background-color 0.25s ease-in;
+}
+.size {
+  font-size: var(--size);
+}
+.background {
+  background-color: var(--background);
+}
+.bg-theme {
+  background-color: var(--bg-theme);
+}
+.color {
+  color: var(--color);
+}
+.primary {
+  color: var(--primary);
+}
+.secondary {
+  color: var(--secondary);
+}
+.error {
+  color: var(--error);
+}
+.info {
+  color: var(--info);
+}
+.accent {
+  color: var(--accent);
+}

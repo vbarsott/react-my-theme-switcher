@@ -1,6 +1,6 @@
 // LAYOUT
 
-$layout: (
+$th-layout: (
   'display': (
     'prefix': 'd',
     'values': (
@@ -87,7 +87,7 @@ $layout: (
     ),
   ),
 );
-@each $property, $map in $layout {
+@each $property, $map in $th-layout {
   $prefix: map-get($map, 'prefix');
   $values: map-get($map, 'values');
   @each $k, $v in $values {
